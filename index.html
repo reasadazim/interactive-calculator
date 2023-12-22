@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/5.3.0/css/bootstrap-slider.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/5.3.0/bootstrap-slider.min.js"></script>
+
+    <link rel="stylesheet" href="./includes/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <body>
+
+
+        <div class="container calculator-wrapper">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="heading text-center">FIND OUT HOW MUCH YOUR BUSINESS COULD GROW</h1>
+                    <h4 class="heading-tagline text-center">Did you know, <strong>just 1 review can bring in 5 additional leads a week?</strong></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="calculator-sliders">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="subheading">ENTER YOUR DETAILS</h3>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <div class="panel-body">
+                                        <div class="calc-slider-title">How many calls do you get a week now?</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="textfield">
+                                        <span><i class="fa fa-volume-control-phone" aria-hidden="true"></i></span>
+                                        <input id="calls" type="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 edit-how-many-calls">
+                                    <!-- <a class="slider-minus"><i class="fa fa-minus-square-o" aria-hidden="true"></i></a> -->
+                                    <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="0" data-slider-id="how-many-calls" id="how-many-calls" data-slider-tooltip="hide" data-slider-handle="round" />
+                                    <!-- <a class="slider-plus"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <div class="panel-body">
+                                        <div class="calc-slider-title">What percentage of those calls do you convert into customers?</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="textfield">
+                                        <span><i class="fa fa-percent" aria-hidden="true"></i></span>
+                                        <input id="percent" type="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 edit-how-many-percent">
+                                    <!-- <a class="slider-minus"><span class="glyphicon glyphicon-minus"></span></a> -->
+                                    <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="0" data-slider-id="how-many-percent" id="how-many-percent" data-slider-tooltip="hide" data-slider-handle="round" />
+                                    <!-- <a class="slider-plus"><span class="glyphicon glyphicon-plus"></span></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <div class="panel-body">
+                                        <div class="calc-slider-title">What's your average ticket price?</div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="textfield">
+                                        <span><i class="fa fa-usd" aria-hidden="true"></i></span>
+                                        <input id="ticket" type="number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 edit-how-many-ticket">
+                                    <!-- <a class="slider-minus"><span class="glyphicon glyphicon-minus"></span></a> -->
+                                    <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="5000" data-slider-step="1" data-slider-value="0" data-slider-id="how-many-ticket" id="how-many-ticket" data-slider-tooltip="hide" data-slider-handle="round" />
+                                    <!-- <a class="slider-plus"><span class="glyphicon glyphicon-plus"></span></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-xs-6 text-center">
+                                    <button class="btn btn-success button-sm" onclick="calculateResult()">Calculate</button>
+                                </div>
+                                <div class="col-xs-6 text-center">
+                                    <button class="btn btn-success button-sm" onclick="clearDisplay()">Clear</button>
+                                </div>
+                                <div class="row">
+                                    <div id="error" class="col-sm-12"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Please enter value to each fields.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="result-panel" class="panel">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" id="display" hidden>
+                                    <!-- <div id="result-wrapper">
+                                        <input type="text" id="display" hidden>
+                                        <p id="resultsParagraph-heading"></p>
+                                        <p id="resultsParagraph"></p>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <div id="res-warpper">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <img class="growth-graphic" src="src/img/bg copy.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="heading-result">YOUR RESULT</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="subheading-result">Your average call is worth...</h3>
+                                <div id="average-call-worth">$0</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="subheading-result">This means, 1 review with All stars App can increase your monthly revenue by...</h3>
+                                <div id="monthly-call-worth">$0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./includes/scripts.js"></script>
+
+        <script>
+        </script>
+    </body>
+
+</html>

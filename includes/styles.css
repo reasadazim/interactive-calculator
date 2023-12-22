@@ -1,0 +1,306 @@
+body {
+    margin-top: 5%;
+}
+
+.panel {
+    margin-top: 20px;
+}
+
+.heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #7A367F;
+}
+
+.heading-tagline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #7A367F;
+}
+
+.subheading {
+    margin-left: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #7A367F;
+}
+
+.heading-result {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #7A367F;
+}
+
+.subheading-result {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: #7A367F;
+    line-height: 45px;
+}
+
+.textfield {
+    border: 1px solid #dedede;
+    background-color: white;
+    border-radius: 5px;
+    padding: 7px 10px;
+    width: 125px;
+    margin-left: 15px;
+}
+
+.slider-minus,
+.slider-plus {
+    cursor: pointer;
+}
+
+.calculator-sliders input {
+    width: 80%;
+    border: none;
+}
+
+.calc-slider-title {
+    font-size: 14px;
+    color: #621269;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.calculator-sliders {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.calculator-wrapper {
+    border: 10px solid #7A367F;
+    border-radius: 10px;
+}
+
+.glyphicon {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.slider.slider-horizontal .slider-track {
+    height: 5px;
+    width: 100%;
+    margin-top: -5px;
+    top: 50%;
+    left: 0;
+    background: #efefef;
+}
+
+.edit-how-many-calls,
+.edit-how-many-ticket,
+.edit-how-many-percent {
+    text-align: center;
+}
+
+.panel {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+#result-wrapper {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    background: #ff4876;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+}
+
+#result-panel {
+    display: none;
+    margin-bottom: 0px;
+}
+
+#resultsParagraph-heading {
+    font-size: 20px;
+    border-bottom: 1px dashed #c2244b;
+    padding-bottom: 10px;
+}
+
+button.btn.btn-success.button-sm {
+    width: 85%;
+    border-radius: 20px;
+    background: #7A367F;
+    border: 3px solid #7A367F;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+button.btn.btn-success.button-sm:hover {
+    width: 85%;
+    border-radius: 20px;
+    background: #632768;
+    border: 3px solid rgb(116, 50, 121);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+#how-many-calls .slider-selection,
+#how-many-ticket .slider-selection,
+#how-many-percent .slider-selection {
+    background: #ff4876;
+    height: 5px;
+}
+
+#how-many-calls .slider-handle,
+#how-many-ticket .slider-handle,
+#how-many-percent .slider-handle {
+    background: #ffffff;
+    margin-top: -8px;
+    border: 2px solid #F92B5D;
+}
+
+#how-many-calls,
+#how-many-ticket,
+#how-many-percent {
+    width: 65%;
+}
+
+.textfield {
+    margin: 0px;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    display: inline-flex;
+}
+
+.fa {
+    color: #7A367F;
+    margin-right: 5px;
+}
+
+#how-many-calls,
+#how-many-ticket,
+#how-many-percent {
+    width: 95%;
+    margin-left: 10px;
+}
+
+#error {
+    color: rgb(55, 0, 255);
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    display: none;
+}
+
+#error .fa {
+    color: #F92B5D !important;
+}
+
+#average-call-worth {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background: #F92B5D;
+    border-radius: 5px;
+    height: 100px;
+    padding-top: 15px;
+}
+
+#monthly-call-worth {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    background: #F92B5D;
+    border-radius: 5px;
+    height: 100px;
+    padding-top: 15px;
+}
+
+#res-warpper {
+    margin-top: 40px;
+}
+
+img.growth-graphic {
+    width: 50%;
+    position: absolute;
+    margin-top: -9%;
+    margin-left: 45%;
+}
+
+@media screen and (max-width:992px) {
+    .calculator-sliders {
+        width: 100%;
+        padding: 0px;
+        margin-top: 10px;
+    }
+    #how-many-calls,
+    #how-many-ticket,
+    #how-many-percent {
+        width: 90%;
+        margin-left: 10px;
+    }
+    #result-wrapper {
+        font-size: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .calc-slider-title {
+        font-size: 12px;
+        color: #621269;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        padding-right: 5px;
+    }
+    .heading {
+        font-size: 20px;
+    }
+    .heading-tagline {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .subheading {
+        margin-left: 0px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .heading-result {
+        text-align: center;
+        font-size: 18px;
+    }
+    .subheading-result {
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+    #average-call-worth {
+        font-size: 30px;
+        height: auto;
+        padding-top: 0px;
+    }
+    #monthly-call-worth {
+        font-size: 30px;
+        margin-bottom: 20px;
+        height: auto;
+        padding-top: 0px;
+    }
+    #error {
+        margin-top: 50px;
+    }
+    img.growth-graphic {
+        width: 100%;
+        position: relative;
+        margin-top: 0px;
+        margin-left: 0;
+        text-align: center;
+        margin: auto;
+    }
+}
